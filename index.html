@@ -59,15 +59,7 @@
     .poster-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
     .poster-card{display:block;border:1px solid var(--line);border-radius:10px;overflow:hidden;color:inherit;background:#fff;transition:transform .15s ease,box-shadow .15s ease}
     .poster-card:hover{text-decoration:none;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
-    .poster-thumb{aspect-ratio:4/3;padding:14px;position:relative;overflow:hidden}
-    .poster-thumb::before,.poster-thumb::after{content:"";position:absolute;border-radius:3px;opacity:.9}
-    .poster-thumb::before{left:8%;right:8%;top:28%;height:8%;background:rgba(255,255,255,.78);box-shadow:0 24px 0 rgba(255,255,255,.62),0 48px 0 rgba(255,255,255,.48),0 72px 0 rgba(255,255,255,.36)}
-    .poster-thumb::after{left:36%;top:26%;width:2px;height:61%;background:rgba(255,255,255,.6);box-shadow:120px 0 0 rgba(255,255,255,.6)}
-    .poster-thumb.neural{background:linear-gradient(180deg,#cbb989 0 17%,#f5f1df 17% 100%)}
-    .poster-thumb.dae{background:linear-gradient(180deg,#d0bb7c 0 17%,#f4f3eb 17% 100%)}
-    .poster-thumb.slac{background:linear-gradient(180deg,#214f85 0 19%,#f4f5f7 19% 100%)}
-    .poster-mini-title{position:relative;z-index:2;font-weight:750;font-size:.76rem;line-height:1.2;text-align:center;color:#17446d}
-    .poster-thumb.slac .poster-mini-title{color:#fff}
+    .poster-thumb{width:100%;aspect-ratio:4/3;object-fit:contain;background:#f6f7f8;display:block}
     .poster-info{padding:12px 13px 14px}
     .poster-info .title{font-size:.96rem}
     .poster-info .meta{font-size:.86rem}
@@ -138,21 +130,21 @@
     <h2>Selected Posters</h2>
     <div class="poster-grid">
       <a class="poster-card" href="https://arxiv.org/abs/2609.33533">
-        <div class="poster-thumb neural"><div class="poster-mini-title">Neural Scaling Laws of Transformer Operator Network</div></div>
+        <img class="poster-thumb" src="assets/neural-scaling-poster.jpg" alt="Neural Scaling Laws of Transformer Operator Network poster">
         <div class="poster-info">
           <div class="title">Neural Scaling Laws of Transformer Operator Network</div>
           <div class="meta">Georgia Statistics Day, 2026 · Upcoming poster</div>
         </div>
       </a>
-      <a class="poster-card" href="https://haoningwu.github.io/GSCS2026.html">
-        <div class="poster-thumb dae"><div class="poster-mini-title">Understanding Denoising Autoencoders through the Manifold Hypothesis</div></div>
+      <a class="poster-card" href="https://haoningwu.github.io/pdf/GSCS2026_Program.pdf">
+        <img class="poster-thumb" src="assets/dae-poster.jpg" alt="Understanding Denoising Autoencoders through the Manifold Hypothesis poster">
         <div class="poster-info">
           <div class="title">Understanding Denoising Autoencoders through the Manifold Hypothesis: A Geometric Perspective</div>
           <div class="meta">Georgia Scientific Computing Symposium &amp; USC–UQ Summer School, 2026</div>
         </div>
       </a>
-      <a class="poster-card" href="https://pstat197.github.io/">
-        <div class="poster-thumb slac"><div class="poster-mini-title">Predicting the Geometry of X-Ray Crystallography Diffraction Images Using Computer Vision</div></div>
+      <a class="poster-card" href="https://pstat197.github.io/projects/projects-23-24.html">
+        <img class="poster-thumb" src="assets/slac-poster.jpg" alt="Predicting the Geometry of X-Ray Crystallography Diffraction Images Using Computer Vision poster">
         <div class="poster-info">
           <div class="title">Predicting the Geometry of X-Ray Crystallography Diffraction Images Using Computer Vision</div>
           <div class="meta">UCSB Data Science Capstone Showcase, 2024</div>
