@@ -23,21 +23,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Generate poster PDFs
-        run: |
-          python -m pip install --quiet pillow
-          mkdir -p posters
-          python - <<'PY'
-          from PIL import Image
-          items = [
-              ("assets/neural-scaling-poster.jpg", "posters/neural-scaling-poster.pdf"),
-              ("assets/dae-poster.jpg", "posters/dae-poster.pdf"),
-              ("assets/slac-poster.jpg", "posters/slac-poster.pdf"),
-          ]
-          for src, dst in items:
-              im = Image.open(src).convert("RGB")
-              im.save(dst, "PDF", resolution=150.0)
-          PY
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload static site
