@@ -23,6 +23,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Generate poster thumbnails
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          mkdir -p poster-thumbs
+          pdftoppm -jpeg -f 1 -singlefile -r 180 posters/neural-scaling.pdf poster-thumbs/neural-scaling
+          pdftoppm -jpeg -f 1 -singlefile -r 180 posters/dae.pdf poster-thumbs/dae
+          pdftoppm -jpeg -f 1 -singlefile -r 180 posters/slac.pdf poster-thumbs/slac
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload static site
