@@ -55,6 +55,13 @@
     .tag{display:inline-block;font-size:.76rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px}
     .exp{display:grid;grid-template-columns:145px 1fr;gap:7px 22px;padding-bottom:18px}
     .date{color:var(--muted);font-size:.94rem}
+
+    .timeline{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:0 0 24px;padding:0}
+    .timeline li{position:relative;border-top:2px solid var(--line);padding-top:15px}
+    .timeline li::before{content:"";position:absolute;top:-5px;left:0;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+    .timeline-year{display:block;color:var(--accent);font-weight:650;margin-bottom:4px}
+    .timeline-detail{display:block;color:var(--muted);font-size:.94rem}
+    @media(max-width:650px){.timeline{grid-template-columns:1fr;gap:18px}.timeline li{border-top:0;border-left:2px solid var(--line);padding:0 0 0 18px}.timeline li::before{top:9px;left:-5px}}
     footer{border-top:1px solid var(--line);padding:22px 0 36px;color:var(--muted);font-size:.9rem}
     .poster-grid{display:grid;grid-template-columns:repeat(3,minmax(0,240px));gap:20px;margin-top:8px;justify-content:space-between}
     .poster-card{display:block;border:1px solid var(--line);border-radius:10px;overflow:hidden;color:inherit;background:#fff;transition:transform .15s ease,box-shadow .15s ease}
@@ -86,6 +93,18 @@
 <main class="wrap">
   <section>
     <h2>About</h2>
+    <ol class="timeline" aria-label="Education timeline">
+      <li>
+        <time class="timeline-year" datetime="2024">2024</time>
+        <span class="title">Graduated from UC Santa Barbara</span>
+        <span class="timeline-detail">B.S. degrees in Applied Mathematics and Statistics and Data Science</span>
+      </li>
+      <li>
+        <time class="timeline-year" datetime="2025">2025–Present</time>
+        <span class="title">Began Ph.D. at Georgia Tech</span>
+        <span class="timeline-detail">Computational Science and Engineering · School of Mathematics</span>
+      </li>
+    </ol>
     <p>I am a Ph.D. student in Computational Science and Engineering at Georgia Tech, with Mathematics as my home unit. I am fortunate to be advised by <a href="https://wliao60.math.gatech.edu/">Prof. Wenjing Liao</a>. My research interests lie at the intersection of mathematical foundations of machine learning, scientific machine learning, and operator learning, with a focus on approximation and generalization theory, representation learning, and data-driven modeling of dynamical systems.</p>
     <p style="margin-top:12px;">Before joining Georgia Tech, I received my B.S. degrees in Applied Mathematics and Statistics and Data Science from UC Santa Barbara, where I was advised by <a href="https://math.ucsb.edu/people/paul-atzberger">Prof. Paul J. Atzberger</a>, <a href="https://www.pstat.ucsb.edu/people/faculty/gareth-w-peters">Prof. Gareth W. Peters</a>, and <a href="https://www.pstat.ucsb.edu/people/faculty/mengyang-gu">Prof. Mengyang Gu</a>.</p>
   </section>
